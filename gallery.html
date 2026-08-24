@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Queluxy Tours</title>
+
+  <meta
+    name="description"
+    content="Picha za destinations na experiences za Queluxy Tours Tanzania."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f3ec;
+      color: #171914;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px 6%;
+
+      background: #171914;
+      color: white;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #d2a85a;
+    }
+
+    .back {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: #d2a85a;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 55vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 90px 7%;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.7)
+        ),
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=90");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #d2a85a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #d2a85a;
+    }
+
+    .hero p:last-child {
+      max-width: 650px;
+      color: #ddd;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    /* GALLERY */
+
+    .gallery-container {
+      width: 88%;
+      max-width: 1300px;
+
+      margin: auto;
+
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p:last-child {
+      max-width: 650px;
+      margin: auto;
+
+      color: #6b6b66;
+      line-height: 1.8;
+    }
+
+    /* FILTER */
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 10px;
+
+      margin-bottom: 45px;
+    }
+
+    .filter {
+      padding: 11px 18px;
+
+      border: 1px solid #d6d0c3;
+
+      border-radius: 40px;
+
+      background: white;
+
+      color: #333;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .filter:hover {
+      background: #171914;
+      color: white;
+      border-color: #171914;
+    }
+
+    /* GRID */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .photo {
+      position: relative;
+
+      height: 330px;
+
+      overflow: hidden;
+
+      border-radius: 12px;
+
+      background-size: cover;
+      background-position: center;
+
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+
+      transition: 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: translateY(-6px);
+    }
+
+    .photo::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.75),
+          transparent 60%
+        );
+    }
+
+    .photo-info {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 22px;
+      bottom: 20px;
+
+      color: white;
+    }
+
+    .photo-info span {
+      color: #d2a85a;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+    }
+
+    .photo-info h3 {
+      font-size: 23px;
+
+      margin-top: 5px;
+    }
+
+    /* IMAGES */
+
+    .photo-1 {
+      background-image:
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-2 {
+      background-image:
+        url("https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-3 {
+      background-image:
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-4 {
+      background-image:
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-5 {
+      background-image:
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-6 {
+      background-image:
+        url("https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-7 {
+      background-image:
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-8 {
+      background-image:
+        url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    .photo-9 {
+      background-image:
+        url("https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1200&q=90");
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 90px 7%;
+
+      text-align: center;
+
+      background: #171914;
+
+      color: white;
+    }
+
+    .cta h2 {
+      max-width: 850px;
+
+      margin: auto;
+
+      font-size: clamp(38px, 6vw, 70px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+    }
+
+    .cta p {
+      max-width: 600px;
+
+      margin: 25px auto 35px;
+
+      color: #aaa;
+
+      line-height: 1.8;
+    }
+
+    .cta-button {
+      display: inline-block;
+
+      padding: 15px 25px;
+
+      border-radius: 40px;
+
+      background: #d2a85a;
+
+      color: #171914;
+
+      font-weight: 800;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 40px 7%;
+
+      background: #10110e;
+
+      color: #999;
+
+      text-align: center;
+
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 17px 5%;
+      }
+
+      .hero {
+        min-height: 55vh;
+        padding: 75px 6%;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .gallery-container {
+        width: 88%;
+        padding: 70px 0;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    QUELUXY <span>TOURS</span>
+  </a>
+
+  <a href="index.html" class="back">
+    ← Rudi Mwanzo
+  </a>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      QUELUXY GALLERY
+    </p>
+
+    <h1>
+      Tanzania <span>kwa picha.</span>
+    </h1>
+
+    <p>
+      Angalia baadhi ya mandhari, destinations
+      na experiences tunazoweza kukusaidia kugundua
+      kupitia Queluxy Tours.
+    </p>
+
+  </div>
+
+</section>
+
+
+<main class="gallery-container">
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      EXPLORE
+    </p>
+
+    <h2>
+      Moments za Tanzania.
+    </h2>
+
+    <p>
+      Kutoka baharini hadi milimani,
+      kutoka wildlife hadi nightlife —
+      Tanzania ina experience kwa kila aina ya msafiri.
+    </p>
+
+  </div>
+
+
+  <div class="filters">
+
+    <a href="#all" class="filter">All</a>
+
+    <a href="#beach" class="filter">🏖️ Beach</a>
+
+    <a href="#mountain" class="filter">🏔️ Milima</a>
+
+    <a href="#wildlife" class="filter">🦁 Wildlife</a>
+
+    <a href="#nature" class="filter">🌿 Nature</a>
+
+    <a href="#nightlife" class="filter">🌃 Nightlife</a>
+
+  </div>
+
+
+  <div class="gallery" id="all">
+
+    <div class="photo photo-1" id="beach">
+      <div class="photo-info">
+        <span>BEACH</span>
+        <h3>Coastal Escape</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-2">
+      <div class="photo-info">
+        <span>ISLAND</span>
+        <h3>Zanzibar</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-3" id="mountain">
+      <div class="photo-info">
+        <span>MOUNTAIN</span>
+        <h3>Mountain Adventure</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-4" id="wildlife">
+      <div class="photo-info">
+        <span>WILDLIFE</span>
+        <h3>Wild Tanzania</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-5">
+      <div class="photo-info">
+        <span>SAFARI</span>
+        <h3>Safari Experience</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-6">
+      <div class="photo-info">
+        <span>CRATER</span>
+        <h3>Ngorongoro</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-7" id="nature">
+      <div class="photo-info">
+        <span>NATURE</span>
+        <h3>Hidden Nature</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-8" id="nightlife">
+      <div class="photo-info">
+        <span>NIGHTLIFE</span>
+        <h3>Dar After Dark</h3>
+      </div>
+    </div>
+
+    <div class="photo photo-9">
+      <div class="photo-info">
+        <span>CULTURE</span>
+        <h3>Local Tanzania</h3>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+
+<section class="cta">
+
+  <p class="eyebrow">
+    QUELUXY TOURS
+  </p>
+
+  <h2>
+    Picha ni mwanzo. Experience ndiyo story.
+  </h2>
+
+  <p>
+    Tuambie unataka experience gani,
+    nasi tutakusaidia kupanga safari yako
+    kulingana na destination, muda na budget yako.
+  </p>
+
+  <a
+    href="https://wa.me/255745179214?text=Habari%20Queluxy%20Tours%2C%20nimeona%20gallery%20yenu%20na%20nataka%20kupanga%20safari."
+    class="cta-button"
+    target="_blank">
+    Wasiliana WhatsApp
+  </a>
+
+</section>
+
+
+<footer>
+
+  <strong>QUELUXY TOURS</strong>
+
+  <p>
+    Safari Za Kipekee, Ladha Ya Kifahari.
+  </p>
+
+</footer>
+
+</body>
+</html>
