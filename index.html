@@ -211,7 +211,331 @@
 
 
 <!-- WHY US -->
+<!-- QUELUXY DISCOVER -->
 
+<section class="discover" id="discover">
+
+  <div class="discover-header">
+
+    <div>
+      <p class="small-title dark">QUELUXY DISCOVER</p>
+
+      <h2>
+        Gundua <span>Tanzania.</span>
+      </h2>
+    </div>
+
+    <p>
+      Kutoka kwenye beaches zilizojificha hadi milima,
+      resorts, mbuga za wanyama na maeneo ya starehe.
+      Chagua experience yako, sisi tunakusaidia kuifikia.
+    </p>
+
+  </div>
+
+
+  <!-- SEARCH -->
+
+  <div class="discover-search">
+
+    <input
+      type="text"
+      id="destinationSearch"
+      placeholder="🔎 Tafuta beach, resort, mlima, mbuga..."
+      onkeyup="searchDestinations()">
+
+  </div>
+
+
+  <!-- CATEGORIES -->
+
+  <div class="categories">
+
+    <button onclick="filterDestinations('all')">
+      ✨ Zote
+    </button>
+
+    <button onclick="filterDestinations('beach')">
+      🏖️ Beach & Resorts
+    </button>
+
+    <button onclick="filterDestinations('nature')">
+      🌿 Nature
+    </button>
+
+    <button onclick="filterDestinations('mountain')">
+      🏔️ Milima
+    </button>
+
+    <button onclick="filterDestinations('wildlife')">
+      🦁 Wildlife
+    </button>
+
+    <button onclick="filterDestinations('nightlife')">
+      🌃 Nightlife
+    </button>
+
+  </div>
+
+
+  <!-- DESTINATIONS -->
+
+  <div class="discover-grid" id="destinationGrid">
+
+
+    <article class="destination-card beach">
+
+      <div class="destination-image beach-image"></div>
+
+      <div class="destination-info">
+
+        <span>🏖️ BEACH & RESORT</span>
+
+        <h3>Kigamboni</h3>
+
+        <p>
+          Fukwe, resorts na sehemu nzuri
+          kwa mapumziko karibu na Dar es Salaam.
+        </p>
+
+        <div class="destination-bottom">
+
+          <small>📍 Dar es Salaam</small>
+
+          <a
+            href="https://wa.me/255745179214?text=Nataka%20kujua%20maeneo%20ya%20Kigamboni."
+            target="_blank">
+            Gundua →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article class="destination-card beach">
+
+      <div class="destination-image resort-image"></div>
+
+      <div class="destination-info">
+
+        <span>🌿 RESORT</span>
+
+        <h3>Kazimzumbwi</h3>
+
+        <p>
+          Nature, mapumziko na getaway
+          kwa watu wanaotaka kutoka kwenye pilikapilika.
+        </p>
+
+        <div class="destination-bottom">
+
+          <small>📍 Pwani</small>
+
+          <a
+            href="https://wa.me/255745179214?text=Nataka%20kujua%20kuhusu%20Kazimzumbwi."
+            target="_blank">
+            Gundua →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article class="destination-card mountain">
+
+      <div class="destination-image mountain-image"></div>
+
+      <div class="destination-info">
+
+        <span>🏔️ MOUNTAIN</span>
+
+        <h3>Uluguru</h3>
+
+        <p>
+          Hiking, mandhari nzuri na
+          adventure kwa wapenda milima.
+        </p>
+
+        <div class="destination-bottom">
+
+          <small>📍 Morogoro</small>
+
+          <a
+            href="https://wa.me/255745179214?text=Nataka%20kujua%20kuhusu%20Uluguru."
+            target="_blank">
+            Gundua →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article class="destination-card wildlife">
+
+      <div class="destination-image safari-image"></div>
+
+      <div class="destination-info">
+
+        <span>🦁 WILDLIFE</span>
+
+        <h3>Mikumi</h3>
+
+        <p>
+          Safari ya kuona wanyamapori
+          na mandhari ya asili.
+        </p>
+
+        <div class="destination-bottom">
+
+          <small>📍 Morogoro</small>
+
+          <a
+            href="https://wa.me/255745179214?text=Nataka%20kujua%20kuhusu%20Mikumi."
+            target="_blank">
+            Gundua →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article class="destination-card nightlife">
+
+      <div class="destination-image nightlife-image"></div>
+
+      <div class="destination-info">
+
+        <span>🌃 NIGHTLIFE</span>
+
+        <h3>Dar es Salaam</h3>
+
+        <p>
+          Nightlife, clubs, lounges,
+          live music na entertainment.
+        </p>
+
+        <div class="destination-bottom">
+
+          <small>📍 Dar es Salaam</small>
+
+          <a
+            href="https://wa.me/255745179214?text=Nataka%20kujua%20kuhusu%20nightlife%20Dar%20es%20Salaam."
+            target="_blank">
+            Gundua →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article class="destination-card beach">
+
+      <div class="destination-image zanzibar-image"></div>
+
+      <div class="destination-info">
+
+        <span>🏝️ BEACH</span>
+
+        <h3>Zanzibar</h3>
+
+        <p>
+          Fukwe, resorts, Stone Town,
+          utamaduni na island experiences.
+        </p>
+
+        <div class="destination-bottom">
+
+          <small>📍 Zanzibar</small>
+
+          <a
+            href="https://wa.me/255745179214?text=Nataka%20kujua%20kuhusu%20Zanzibar."
+            target="_blank">
+            Gundua →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<script>
+
+function filterDestinations(category) {
+
+  const cards =
+    document.querySelectorAll(".destination-card");
+
+  cards.forEach(card => {
+
+    if (
+      category === "all" ||
+      card.classList.contains(category)
+    ) {
+
+      card.style.display = "block";
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+}
+
+
+function searchDestinations() {
+
+  const input =
+    document.getElementById("destinationSearch")
+    .value
+    .toLowerCase();
+
+  const cards =
+    document.querySelectorAll(".destination-card");
+
+  cards.forEach(card => {
+
+    const text =
+      card.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+
+      card.style.display = "block";
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+}
+
+</script>
 <section class="why">
 
   <div>
