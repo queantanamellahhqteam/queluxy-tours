@@ -543,7 +543,15 @@ footer p {
   }
 
   nav {
-    display: none;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav a {
+  font-size: 11px;
+}
   }
 
   .hero {
