@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gundua Tanzania | Queluxy Tours</title>
+
+  <meta
+    name="description"
+    content="Gundua beach, resorts, milima, wildlife, nature, nightlife na hidden gems za Tanzania kupitia Queluxy Tours."
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f3ec;
+      color: #171914;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px 6%;
+
+      background: #171914;
+      color: white;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #d2a85a;
+    }
+
+    .back {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: #d2a85a;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      min-height: 65vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 90px 7%;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.65)
+        ),
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=90");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #d2a85a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #d2a85a;
+    }
+
+    .hero p:last-child {
+      max-width: 650px;
+      color: #ddd;
+      font-size: 17px;
+    }
+
+
+    /* MAIN */
+
+    .container {
+      width: 86%;
+      max-width: 1250px;
+      margin: auto;
+      padding: 80px 0;
+    }
+
+
+    /* CATEGORY NAV */
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+
+      margin-bottom: 70px;
+    }
+
+    .category {
+      padding: 12px 20px;
+
+      border: 1px solid #d6d0c3;
+
+      border-radius: 40px;
+
+      background: white;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .category:hover {
+      background: #171914;
+      color: white;
+      border-color: #171914;
+    }
+
+
+    /* SECTION */
+
+    .destination-section {
+      margin-bottom: 100px;
+    }
+
+    .section-title {
+      margin-bottom: 35px;
+    }
+
+    .section-title .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(35px, 5vw, 60px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+
+    /* CARDS */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .card {
+      overflow: hidden;
+
+      background: white;
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,0.08);
+
+      transition: 0.35s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .image {
+      height: 240px;
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .tag {
+      color: #a77b32;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+
+      margin: 8px 0;
+    }
+
+    .card p {
+      color: #666;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    .location {
+      display: block;
+
+      margin: 15px 0;
+
+      color: #777;
+
+      font-size: 13px;
+    }
+
+    .book {
+      display: inline-block;
+
+      padding: 11px 18px;
+
+      border-radius: 30px;
+
+      background: #171914;
+
+      color: white;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .book:hover {
+      background: #d2a85a;
+
+      color: #171914;
+    }
+
+
+    /* IMAGES */
+
+    .kigamboni {
+      background-image:
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .zanzibar {
+      background-image:
+        url("https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .kazimzumbwi {
+      background-image:
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .uluguru {
+      background-image:
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .kilimanjaro {
+      background-image:
+        url("https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .mikumi {
+      background-image:
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .serengeti {
+      background-image:
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .ngorongoro {
+      background-image:
+        url("https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .forest {
+      background-image:
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .nightlife {
+      background-image:
+        url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=85");
+    }
+
+    .culture {
+      background-image:
+        url("https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85");
+    }
+
+
+    /* CTA */
+
+    .cta {
+      padding: 90px 7%;
+
+      text-align: center;
+
+      background: #171914;
+
+      color: white;
+    }
+
+    .cta h2 {
+      max-width: 800px;
+
+      margin: auto;
+
+      font-size: clamp(38px, 6vw, 70px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+    }
+
+    .cta p {
+      max-width: 600px;
+
+      margin: 25px auto 35px;
+
+      color: #aaa;
+    }
+
+    .cta-button {
+      display: inline-block;
+
+      padding: 15px 25px;
+
+      border-radius: 40px;
+
+      background: #d2a85a;
+
+      color: #171914;
+
+      font-weight: 800;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 40px 7%;
+
+      background: #10110e;
+
+      color: #999;
+
+      text-align: center;
+
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+
+      letter-spacing: 2px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .navbar {
+        padding: 17px 5%;
+      }
+
+      .hero {
+        min-height: 60vh;
+
+        padding: 75px 6%;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+      }
+
+      .container {
+        width: 88%;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .image {
+        height: 230px;
+      }
+
+      .category {
+        font-size: 13px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    QUELUXY <span>TOURS</span>
+  </a>
+
+  <a href="index.html" class="back">
+    ← Rudi Mwanzo
+  </a>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      QUELUXY DISCOVER
+    </p>
+
+    <h1>
+      Gundua <span>Tanzania.</span>
+    </h1>
+
+    <p>
+      Kutoka beaches ndogo na resorts za kifahari,
+      hadi milima, mbuga za wanyama, hidden gems,
+      nightlife na experiences za kipekee.
+    </p>
+
+  </div>
+
+</section>
+
+
+<main class="container">
+
+
+  <!-- CATEGORIES -->
+
+  <div class="categories">
+
+    <a href="#beaches" class="category">
+      🏖️ Beach & Resorts
+    </a>
+
+    <a href="#mountains" class="category">
+      🏔️ Milima
+    </a>
+
+    <a href="#wildlife" class="category">
+      🦁 Wildlife
+    </a>
+
+    <a href="#nature" class="category">
+      🌿 Nature
+    </a>
+
+    <a href="#nightlife" class="category">
+      🌃 Nightlife
+    </a>
+
+    <a href="#culture" class="category">
+      🏛️ Culture
+    </a>
+
+  </div>
+
+
+  <!-- BEACHES -->
+
+  <section class="destination-section" id="beaches">
+
+    <div class="section-title">
+
+      <p class="eyebrow">
+        BEACH & RESORTS
+      </p>
+
+      <h2>
+        Pumzika karibu na bahari.
+      </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <article class="card">
+
+        <div class="image kigamboni"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            BEACH
+          </span>
+
+          <h3>
+            Kigamboni
+          </h3>
+
+          <p>
+            Beaches na resorts mbalimbali
+            kwa getaway karibu na Dar es Salaam.
+          </p>
+
+          <span class="location">
+            📍 Dar es Salaam
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20safari%20ya%20Kigamboni."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="image zanzibar"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            ISLAND
+          </span>
+
+          <h3>
+            Zanzibar
+          </h3>
+
+          <p>
+            Beaches, resorts, Stone Town
+            na island experiences.
+          </p>
+
+          <span class="location">
+            📍 Zanzibar
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20safari%20ya%20Zanzibar."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="image kazimzumbwi"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            HIDDEN GEM
+          </span>
+
+          <h3>
+            Kazimzumbwi
+          </h3>
+
+          <p>
+            Sehemu nzuri kwa nature,
+            mapumziko na getaway tulivu.
+          </p>
+
+          <span class="location">
+            📍 Pwani
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20kujua%20kuhusu%20Kazimzumbwi."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- MOUNTAINS -->
+
+  <section class="destination-section" id="mountains">
+
+    <div class="section-title">
+
+      <p class="eyebrow">
+        MOUNTAINS
+      </p>
+
+      <h2>
+        Panda juu. Ona zaidi.
+      </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <article class="card">
+
+        <div class="image uluguru"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            HIKING
+          </span>
+
+          <h3>
+            Uluguru
+          </h3>
+
+          <p>
+            Hiking, mandhari nzuri na
+            adventure za milimani.
+          </p>
+
+          <span class="location">
+            📍 Morogoro
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20safari%20ya%20Uluguru."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="image kilimanjaro"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            ADVENTURE
+          </span>
+
+          <h3>
+            Kilimanjaro
+          </h3>
+
+          <p>
+            Moja ya experiences kubwa
+            za milimani Tanzania.
+          </p>
+
+          <span class="location">
+            📍 Kilimanjaro
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20safari%20ya%20Kilimanjaro."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- WILDLIFE -->
+
+  <section class="destination-section" id="wildlife">
+
+    <div class="section-title">
+
+      <p class="eyebrow">
+        WILDLIFE
+      </p>
+
+      <h2>
+        Kutana na wild Tanzania.
+      </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <article class="card">
+
+        <div class="image mikumi"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            SAFARI
+          </span>
+
+          <h3>
+            Mikumi
+          </h3>
+
+          <p>
+            Safari ya kuona wanyamapori
+            na mandhari ya asili.
+          </p>
+
+          <span class="location">
+            📍 Morogoro
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20safari%20ya%20Mikumi."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="image serengeti"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            WILDLIFE
+          </span>
+
+          <h3>
+            Serengeti
+          </h3>
+
+          <p>
+            Wildlife, savannah na
+            safari za kipekee.
+          </p>
+
+          <span class="location">
+            📍 Arusha / Mara
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20safari%20ya%20Serengeti."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="image ngorongoro"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            CRATER
+          </span>
+
+          <h3>
+            Ngorongoro
+          </h3>
+
+          <p>
+            Mandhari ya kipekee na
+            wildlife ndani ya crater.
+          </p>
+
+          <span class="location">
+            📍 Arusha
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20safari%20ya%20Ngorongoro."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- NATURE -->
+
+  <section class="destination-section" id="nature">
+
+    <div class="section-title">
+
+      <p class="eyebrow">
+        NATURE & HIDDEN GEMS
+      </p>
+
+      <h2>
+        Sehemu za kupumua.
+      </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="image forest"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            NATURE
+          </span>
+
+          <h3>
+            Forest Getaway
+          </h3>
+
+          <p>
+            Nature, utulivu na getaway
+            kwa wanaotaka escape ya mjini.
+          </p>
+
+          <span class="location">
+            📍 Tanzania
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20natafuta%20nature%20getaway."
+            class="book"
+            target="_blank">
+            Uliza kuhusu safari
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- NIGHTLIFE -->
+
+  <section class="destination-section" id="nightlife">
+
+    <div class="section-title">
+
+      <p class="eyebrow">
+        NIGHTLIFE
+      </p>
+
+      <h2>
+        Usiku nao ni experience.
+      </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="image nightlife"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            NIGHTLIFE
+          </span>
+
+          <h3>
+            Dar es Salaam
+          </h3>
+
+          <p>
+            Clubs, lounges, music,
+            events na entertainment.
+          </p>
+
+          <span class="location">
+            📍 Dar es Salaam
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20nightlife%20experience%20Dar%20es%20Salaam."
+            class="book"
+            target="_blank">
+            Uliza kuhusu experience
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- CULTURE -->
+
+  <section class="destination-section" id="culture">
+
+    <div class="section-title">
+
+      <p class="eyebrow">
+        CULTURE & HISTORY
+      </p>
+
+      <h2>
+        Fahamu Tanzania.
+      </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="image culture"></div>
+
+        <div class="card-content">
+
+          <span class="tag">
+            CULTURE
+          </span>
+
+          <h3>
+            Local Experiences
+          </h3>
+
+          <p>
+            Utamaduni, historia, chakula
+            na experiences za ndani.
+          </p>
+
+          <span class="location">
+            📍 Tanzania
+          </span>
+
+          <a
+            href="https://wa.me/255745179214?text=Habari%20Queluxy%2C%20nataka%20local%20culture%20experience."
+            class="book"
+            target="_blank">
+            Uliza kuhusu experience
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <p class="eyebrow">
+    QUELUXY TOURS
+  </p>
+
+  <h2>
+    Safari yako inayofuata inaanza hapa.
+  </h2>
+
+  <p>
+    Bei inategemea destination, idadi ya wasafiri,
+    siku na aina ya package unayochagua.
+  </p>
+
+  <a
+    href="https://wa.me/255745179214?text=Habari%20Queluxy%20Tours%2C%20nataka%20kupanga%20safari."
+    class="cta-button"
+    target="_blank">
+    Wasiliana WhatsApp
+  </a>
+
+</section>
+
+
+<footer>
+
+  <strong>
+    QUELUXY TOURS
+  </strong>
+
+  <p>
+    Safari Za Kipekee, Ladha Ya Kifahari.
+  </p>
+
+</footer>
+
+
+</body>
+</html>
