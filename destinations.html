@@ -1,6 +1,169 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
+  <style>
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f2eb;
+    color: #171914;
+    line-height: 1.7;
+  }
+
+  body > h1 {
+    margin: 0;
+    padding: 80px 7% 15px;
+    background: #171914;
+    color: white;
+    font-size: clamp(42px, 8vw, 75px);
+    letter-spacing: -3px;
+  }
+
+  body > h1 + p {
+    margin: 0;
+    padding: 0 7% 70px;
+    background: #171914;
+    color: #cfcfcf;
+    font-size: 16px;
+  }
+
+  body > hr {
+    display: none;
+  }
+
+  body > h2 {
+    margin: 70px auto 10px;
+    width: 86%;
+    max-width: 1000px;
+    font-size: clamp(35px, 6vw, 60px);
+    letter-spacing: -3px;
+  }
+
+  body > h2::before {
+    content: "HIDDEN GEM • PWANI";
+    display: block;
+    margin-bottom: 12px;
+    color: #b88a3b;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  body > h2 + p {
+    width: 86%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    color: #b88a3b;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  body > h2 + p + p {
+    width: 86%;
+    max-width: 760px;
+    margin: 0 auto 25px;
+    color: #5f5f5a;
+    font-size: 16px;
+  }
+
+  body > h3 {
+    width: 86%;
+    max-width: 1000px;
+    margin: 35px auto 10px;
+    font-size: 20px;
+  }
+
+  body > ul {
+    width: 86%;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  body > ul li {
+    background: white;
+    padding: 9px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.06);
+  }
+
+  body > ul + p {
+    width: 86%;
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    padding: 20px;
+    border-left: 3px solid #b88a3b;
+    background: white;
+    color: #666;
+    font-size: 14px;
+  }
+
+  body > a {
+    display: inline-block;
+    margin: 0 7% 80px;
+    padding: 14px 23px;
+    border-radius: 30px;
+    background: #171914;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .3s;
+  }
+
+  body > a:hover {
+    background: #b88a3b;
+    color: #171914;
+  }
+
+  @media (max-width: 600px) {
+
+    body > h1 {
+      padding: 60px 6% 15px;
+      font-size: 48px;
+    }
+
+    body > h1 + p {
+      padding: 0 6% 55px;
+    }
+
+    body > h2 {
+      width: 88%;
+      margin-top: 55px;
+    }
+
+    body > h2 + p,
+    body > h2 + p + p,
+    body > h3,
+    body > ul,
+    body > ul + p {
+      width: 88%;
+    }
+
+    body > ul {
+      display: block;
+    }
+
+    body > ul li {
+      margin-bottom: 8px;
+    }
+
+    body > a {
+      margin-left: 6%;
+      margin-bottom: 60px;
+    }
+
+  }
+
+</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destinations | Queluxy Tours</title>
